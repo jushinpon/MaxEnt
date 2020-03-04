@@ -1,0 +1,24 @@
+#B2 unit cell structure
+#!the total MC iteration times,te total initial random search times
+100000 10 
+# ! atom number per unit cell
+4
+#! fractional coordinates of each atom in the unit cell
+0.0 0.0 0.0
+0.0 0.5 0.5
+0.5 0.0 0.5
+0.5 0.5 0.0
+#! nx ny nz (the replicate times in x, y, and z dimensions)
+7 7 7
+#! rlist for cell list (0.87 1.0 1.4 1.65 1.73 for B2. maximal value+0.2 should be used)
+1.62
+#! real lattice constant
+1
+#!element type for HEA
+5
+#!element fractions
+1
+1
+1
+1
+1
