@@ -5,6 +5,9 @@
 !
 !1. You need to assign the HEA UNIT cell first
 !Output file:
+
+!!!test
+!!!!
 include 'information.f90'
 PROGRAM MAXEnt
 !    use omp_lib
