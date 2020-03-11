@@ -136,27 +136,27 @@ do 112 imc=1,iterMC
             !write(*,*)"2"
 		if(Mod(imc,50).eq.0)then	
 		  
-		   keepNo = 0
-		  do i11 = 1,natom
-	      if(atomentropy(i11) .ge. filterValue)then
-		     keepNo = keepNo + 1
-		
-		      keepeID(keepNo) = i11
-		!write(*,*)i,atomentropy(i),keepNo
-		!pause
-	       endif	
-	!if(keepNo .ge. 200) exit ! only consider the maximal number of 100
-          enddo
+	!	   keepNo = 0
+	!	  do i11 = 1,natom
+	!      if(atomentropy(i11) .ge. filterValue)then
+	!	     keepNo = keepNo + 1
+	!	
+	!	      keepeID(keepNo) = i11
+	!	!write(*,*)i,atomentropy(i),keepNo
+	!	!pause
+	!       endif	
+	!!if(keepNo .ge. 200) exit ! only consider the maximal number of 100
+    !      enddo
 		  
 		  
           write(*,*)""
           write(*,*)""		  
           write(*,*)"##********  MC iterations: ",imc
-		  write(*,*)"##  atom Number with large scoring value:",keepNo
+	!	  write(*,*)"##  atom Number with large scoring value:",keepNo
 		 
-		  do ikeep =1,keepNO
-		    write(*,*)ikeep,keepeID(ikeep),atomentropy(keepeID(ikeep))
-		  enddo
+	!	  do ikeep =1,keepNO
+	!	    write(*,*)ikeep,keepeID(ikeep),atomentropy(keepeID(ikeep))
+	!	  enddo
 		  write(*,*)"Ave confentropy:", afterconfentropy/dble(natom)
           write(*,*)"*** CURRENT best:",Entmin/dble(natom)
 		  write(*,*) "*** The first three nearest neighbour numbers for current best***"	
@@ -217,20 +217,20 @@ do 112 imc=1,iterMC
                 write(101,*) "***current normalized configurational entropy: ",confentropy/dble(natom)
                 write(101,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
                 
-				keepNo = 0
-		  do i11 = 1,natom
-	      if(atomentropy(i11) .ge. filterValue)then
-		     keepNo = keepNo + 1
-		
-		      keepeID(keepNo) = i11
-		!write(*,*)i,atomentropy(i),keepNo
-		!pause
-	       endif	
+				!keepNo = 0
+		 ! do i11 = 1,natom
+	     ! if(atomentropy(i11) .ge. filterValue)then
+		 !    keepNo = keepNo + 1
+		!
+		 !     keepeID(keepNo) = i11
+		!!write(*,*)i,atomentropy(i),keepNo
+		!!pause
+	     !  endif	
 	!if(keepNo .ge. 200) exit ! only consider the maximal number of 100
-          enddo
-			do ikeep =1,keepNO
-		    write(101,*)ikeep,keepeID(ikeep),atomentropy(keepeID(ikeep))
-		  enddo	
+          !enddo
+		!	do ikeep =1,keepNO
+		  !  write(101,*)ikeep,keepeID(ikeep),atomentropy(keepeID(ikeep))
+		  !enddo	
 				
 				
 				write(101,*)""
@@ -263,18 +263,18 @@ do 112 imc=1,iterMC
 				katomentropy = atomentropy ! keep atom potential
                 naccept = naccept + 1
 				
-            elseif(r .lt. Boltz) then
-				!if (Boltz .lt. 0.01) write(*,*)"*****Using the case within the worst 1% for evolution!!!" 
-                !xkeep = x
-                !ykeep = y
-                !zkeep = z
-                Entkeep = confentropy
-				atkeep = atype
-				katomentropy = atomentropy ! keep atom potential
-                naccept = naccept + 1
-             !   write(*,*)"******Boltzmann factor works at loop: ",imc
-             !   write(*,*)r,Boltz
-                !call sleep(1)
+         !   elseif(r .lt. Boltz) then
+		!		!if (Boltz .lt. 0.01) write(*,*)"*****Using the case within the worst 1% for evolution!!!" 
+         !       !xkeep = x
+         !       !ykeep = y
+         !       !zkeep = z
+         !       Entkeep = confentropy
+		!		atkeep = atype
+		!		katomentropy = atomentropy ! keep atom potential
+         !       naccept = naccept + 1
+         !    !   write(*,*)"******Boltzmann factor works at loop: ",imc
+         !    !   write(*,*)r,Boltz
+         !       !call sleep(1)
             else
                 !x = xkeep
                 !y = ykeep

@@ -187,6 +187,7 @@ pairweight(5,2) = -5.510
 pairweight(5,3) = -4.979
 pairweight(5,4) = -6.738
 pairweight = pairweight/dble(weight(1))
+!pairweight = 1.0
 
 !write(*,*)'3'
 !!!!!!!!!!!!!!

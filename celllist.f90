@@ -131,7 +131,7 @@ do 3 i=1,natom
                       ! do the classification for five types
 					  vneimin = 1000.d0 ! initial value for finding the proper neighbor ID
 					  neitypeID = 0 !integer
-					  do icn =1,5
+					  do icn =1,3
                         vnei = abs( ( r/rdfpeak(icn) ) - 1 )
 						!write(*,*)"icn: ",icn
 						!write(*,*)"vnei: ",vnei

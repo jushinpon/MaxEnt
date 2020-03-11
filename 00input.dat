@@ -10,8 +10,8 @@
 0.5 0.5 0.0
 #! nx ny nz (the replicate times in x, y, and z dimensions)
 7 7 7
-#! rlist for cell list (0.87 1.0 1.4 1.65 1.73 for B2. maximal value+0.2 should be used)
-1.62
+#! rlist for cell list for the third nearest neighbour atoms
+1.25
 #! real lattice constant
 1
 #!element type for HEA

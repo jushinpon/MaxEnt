@@ -16,7 +16,7 @@ ndup = 0 ! atom ID counter without duplicate ID
 
 do 1 ip=1,2
   i = ipair(ip)
-	do 2 ine =1,5 !neighbor atom type
+	do 2 ine =1,3 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) ! the nth neighbor atom ID of i
@@ -61,7 +61,7 @@ do 11 ip=1,ndup
        ntemp = CN_No(i,ine)
 		do 31 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) 
-		  if(ine .le. 2 )then !first neighbour atoms
+		  if(ine .le. 1 )then !first neighbour atoms
             ! confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
              atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
            else
