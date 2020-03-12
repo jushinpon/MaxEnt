@@ -1,9 +1,10 @@
-@files = <*.data>;
+@files = <00MC*.data>;
 
-foreach my $i (@files){
-unlink "$i";
-print "Kill $i file\n";
-}
+#foreach my $i (@files){
+#unlink "$i";
+#print "Kill $i file\n";
+#}
+
 unlink "./maxent.exe";
 #system("gfortran -fopenmp -O3 -o maxent.exe 00MAXENT_main.f90");
 $temp = system("gfortran -O3 -o maxent.exe 00MAXENT_main.f90");

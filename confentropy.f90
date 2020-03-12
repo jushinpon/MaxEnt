@@ -1,7 +1,6 @@
 subroutine conf_entropy
 use information
 implicit real*8(a-h,o-z)   
-
 confentropy = 0.0 ! configurational entropy
 atomentropy = 0.0 ! entropy of each atom for normshuffle, set 1 for inital
 do 1 i=1,natom

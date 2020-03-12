@@ -8,7 +8,6 @@ real*8  oldconfentropy,SCFEntmin,SCFatomentropy(natom)
 real*8  oldSCFatomentropy(natom)
 real*8  newent,oldent,SCFatkeep(natom)
 
-
 !pause
 !!!!!call omp_set_num_threads(1)
 
@@ -35,25 +34,10 @@ keepNo = 0
 do i = 1,natom
 	if(atomentropy(i) .ge. filterValue)then
 		keepNo = keepNo + 1
-		
 		keepeID(keepNo) = i
-		!write(*,*)i,atomentropy(i),keepNo
-		!pause
 	endif	
-	!if(keepNo .ge. 200) exit ! only consider the maximal number of 100
-enddo
-!write(*,*)i,atomentropy(i),keepNo     
-	 
-if(keepNo .eq. 0)then
- write(*,*)"***All atoms with larger scoring values have been processed!!***"
- write(*,*)"YOU CAN TERMINATE YOUR CODE or WAIT for BETTER by MC!!!!!!!!!!!"
- 
- !do i =1,natom
- !   write(*,*)i,atomentropy(i),keepNo
- !enddo
- !  write(*,*)"Ave confentropy:", confentropy/dble(natom) 
- !pause
-endif 
+enddo	 
+
 !!!!!!!!!!!!!!!!!!!
 
  iscf = iscf + 1 
@@ -84,8 +68,7 @@ icheck = 1
         jj = keepeID(jj1)		
 	   
 	   if(atype(ii) .ne. atype(jj).and.atomentropy(ii) .ge. filterValue.and.atomentropy(jj).ge.filterValue) then	        !ne 不等於
-	   
-          ishift = atype(ii)
+	      ishift = atype(ii)
           atype(ii) = atype(jj)
           atype(jj) = ishift
 		  oldconfentropy = confentropy
@@ -94,6 +77,10 @@ icheck = 1
 		  !write(*,*)"T", omp_get_thread_num(),ii,jj
 		  !write(*,*)confentropy
 		  temp = confentropy
+		!  print*, "In SCF ii jj: ",ii,jj
+		!  print*, "atype: ",atype(ii),atype(jj)
+		!  
+		!  print *, "confentropy not updated type switched: ",confentropy/dble(natom)
 		  call conf_entropyP(ii,jj) !get new confentropy
 		  !call conf_entropy
 		 ! if(confentropy .lt.0)then

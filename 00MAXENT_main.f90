@@ -37,7 +37,7 @@ PROGRAM MAXEnt
    ! call conf_entropy !first evaluation
     do 111 ini=1,inirand
      
-        call shuffle
+        !call shuffle
 		call conf_entropy
 	 	 
         !	do ient =1,natom
@@ -67,6 +67,21 @@ PROGRAM MAXEnt
             write(*,*)"Normalized configurational entropy: ",confentropy/dble(natom)
 			!write(*,*) '  The number of threads available is:    ', thread_num
             write(*,*)""
+            NN =0								
+				do 1112 i=1,natom
+				!write(*,*)"atom: ",i," atomentropy: ",atomentropy(i)
+					do 211 ine =1,5 !neighbor atom type
+					ntemp = CN_No(i,ine)
+						do 311 neID = 1,ntemp ! atom ID of a neighbor type
+						JID = CN_ID(i,ine,neID)          
+						if(atype(i) .eq. atype(JID))then
+							NN(ine) = NN(ine) + 1
+						endif 
+				311 		continue                      
+				211   continue  						
+				1112 continue			
+				
+                 write(*,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
  
         endif
 
@@ -170,7 +185,9 @@ do 112 imc=1,iterMC
 	!enddo
 !**************** by OMP
     	!write(*,*)"before Ave confentropy:", confentropy/dble(natom) 	
+
 		  call SCF ! use each poossile pair to get the best final atype
+
 		afterconfentropy = confentropy
 		!write(*,*)"after Ave confentropy:", confentropy/dble(natom)   
 	!	  	do i=1,10
@@ -216,7 +233,19 @@ do 112 imc=1,iterMC
                 write(101,*)"The searched configuration No : ",nbetter
                 write(101,*) "***current normalized configurational entropy: ",confentropy/dble(natom)
                 write(101,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
-                
+                if(keepNo .eq. 0 )then !all bad atoms are done
+                    write(*,*)"#MC process at MC step:", imc
+					write(*,*)"***keepNo = 0, All atoms with larger scoring values have been processed!!***"
+					write(*,*)"YOU CAN TERMINATE YOUR CODE or WAIT for BETTER by MC!!!!!!!!!!!"
+					write(*,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
+
+					write(101,*)"***keepNo = 0, All atoms with larger scoring values have been processed!!***"
+					write(101,*)"YOU CAN TERMINATE YOUR CODE !!!!!!!!!!!"
+					pause
+				endif 
+                !call conf_entropy
+                !write(101,*) "***After conf_entropy: ",confentropy/dble(natom)
+
 				!keepNo = 0
 		 ! do i11 = 1,natom
 	     ! if(atomentropy(i11) .ge. filterValue)then
@@ -263,18 +292,18 @@ do 112 imc=1,iterMC
 				katomentropy = atomentropy ! keep atom potential
                 naccept = naccept + 1
 				
-         !   elseif(r .lt. Boltz) then
-		!		!if (Boltz .lt. 0.01) write(*,*)"*****Using the case within the worst 1% for evolution!!!" 
-         !       !xkeep = x
-         !       !ykeep = y
-         !       !zkeep = z
-         !       Entkeep = confentropy
-		!		atkeep = atype
-		!		katomentropy = atomentropy ! keep atom potential
-         !       naccept = naccept + 1
-         !    !   write(*,*)"******Boltzmann factor works at loop: ",imc
-         !    !   write(*,*)r,Boltz
-         !       !call sleep(1)
+           elseif(r .lt. Boltz) then
+				!if (Boltz .lt. 0.01) write(*,*)"*****Using the case within the worst 1% for evolution!!!" 
+               !xkeep = x
+               !ykeep = y
+               !zkeep = z
+               Entkeep = confentropy
+				atkeep = atype
+				katomentropy = atomentropy ! keep atom potential
+               naccept = naccept + 1
+            !   write(*,*)"******Boltzmann factor works at loop: ",imc
+            !   write(*,*)r,Boltz
+               !call sleep(1)
             else
                 !x = xkeep
                 !y = ykeep
@@ -316,6 +345,7 @@ do 112 imc=1,iterMC
             endif
 !! generate the next 
             call kshuffle(imc)
+            
             !call lmpdata("00MC",imc)
 112 continue
 

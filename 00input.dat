@@ -1,19 +1,11 @@
-#B2 unit cell structure
+# The input file for MaxEnt developed by Prof. Shin-Pon Ju
+####### begin below
 #!the total MC iteration times,te total initial random search times
-100000 10 
-# ! atom number per unit cell
-4
-#! fractional coordinates of each atom in the unit cell
-0.0 0.0 0.0
-0.0 0.5 0.5
-0.5 0.0 0.5
-0.5 0.5 0.0
-#! nx ny nz (the replicate times in x, y, and z dimensions)
-7 7 7
+5000 1
+#! PBC in x, y, and z
+True True True 
 #! rlist for cell list for the third nearest neighbour atoms
 1.25
-#! real lattice constant
-1
 #!element type for HEA
 5
 #!element fractions
@@ -22,3 +14,20 @@
 1
 1
 1
+#! need to assign atom types or not(True or False)
+False
+#! how you build your structure (cfg, data, or default)
+data
+#! data file name (If the above is default, this is fake)
+00MC_00004.data
+# ! atom number per unit cell
+4
+#! fractional coordinates of each atom in the unit cellp
+0.0 0.0 0.0
+0.0 0.5 0.5
+0.5 0.0 0.5
+0.5 0.5 0.0
+#! nx ny nz (the replicate times in x, y, and z dimensions)
+5 5 5
+
+
