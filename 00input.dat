@@ -1,7 +1,7 @@
 # The input file for MaxEnt developed by Prof. Shin-Pon Ju
 ####### begin below
 #!the total MC iteration times,te total initial random search times
-5000 1
+500000 10
 #! PBC in x, y, and z
 True True True 
 #! rlist for cell list for the third nearest neighbour atoms
@@ -15,9 +15,9 @@ True True True
 1
 1
 #! need to assign atom types or not(True or False)
-False
+True
 #! how you build your structure (cfg, data, or default)
-data
+default
 #! data file name (If the above is default, this is fake)
 00MC_00004.data
 # ! atom number per unit cell
@@ -28,6 +28,6 @@ data
 0.5 0.0 0.5
 0.5 0.5 0.0
 #! nx ny nz (the replicate times in x, y, and z dimensions)
-5 5 5
+8 8 8
 
 
