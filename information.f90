@@ -270,7 +270,7 @@ rdfpeak(5)=1.6
 !write(*,*)'2'
 weight = 1.d0
 weightbase = 1.d0 
-weight(1) = weightbase*1.e6 !first Id is the neighbour ID, the second is atom type
+weight(1) = weightbase*1.e3 !first Id is the neighbour ID, the second is atom type
 weight(2) = weightbase*0.0
 weight(3) = weightbase*(-1.0)
 weight(4) = weightbase*(-1.e-2) !not used 

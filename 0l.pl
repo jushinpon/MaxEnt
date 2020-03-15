@@ -8,6 +8,7 @@
 unlink "./maxent.exe";
 #system("gfortran -fopenmp -O3 -o maxent.exe 00MAXENT_main.f90");
 $temp = system("gfortran -O3 -o maxent.exe 00MAXENT_main.f90");
+#$temp = system("gfortran -g -fcheck=all -Wall 00MAXENT_main.f90");
  die "Compiling failed" if($temp);
 #sleep(1);
 $temp = './maxent.exe';#.' > 00printout.txt';

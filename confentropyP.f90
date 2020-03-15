@@ -90,7 +90,9 @@ do 11 ip=1,ndup
              
            else
              !confentropy = confentropy + weight(ine)
-             atomentropy(i) = atomentropy(i) + weight(ine)                     
+             if(atype(i) .eq. atype(JID))then
+				atomentropy(i) = atomentropy(i) + weight(ine)
+             endif                     
            endif
 		 ! if(atype(i) .eq. atype(JID))then             
          !    atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))

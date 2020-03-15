@@ -14,7 +14,7 @@ PROGRAM MAXEnt
     real*8 Boltz,r,ini_acceptratio
     integer NN(5)
     !CALL random_seed()
-    call init_random_seed()
+    !call init_random_seed(123)
 	call general_para ! activate all parameters
     call celllist ! get topology of system
 
@@ -24,7 +24,7 @@ PROGRAM MAXEnt
     ini_acceptratio = 0.7 ! the initial value for acceptration
     kT = 1.e3 ! the initial value for Boltzmann factor
 
-    Entmin = 1.e20 ! initial entropy
+    Entmin = 1.e30 ! initial entropy
     nbetter = 0
    ! call conf_entropy !first evaluation
     do 111 ini=1,inirand
@@ -47,6 +47,9 @@ PROGRAM MAXEnt
             write(101,*)""
             write(*,*) "***current RANDOM searched better configuration No.: ",nbetter
             write(*,*)"Normalized configurational entropy: ",confentropy/dble(natom)
+            call conf_entropy
+            write(*,*)"call again Normalized configurational entropy: ",confentropy/dble(natom)
+
             write(*,*)""
             NN =0								
 				do 1112 i=1,natom
@@ -137,12 +140,12 @@ do 112 imc=1,iterMC
                 if(keepNo .eq. 0 )then !all bad atoms are done
                     write(*,*)"#MC process at MC step:", imc
 					write(*,*)"***keepNo = 0, All atoms with larger scoring values have been processed!!***"
-					write(*,*)"YOU CAN TERMINATE YOUR CODE or WAIT for BETTER by MC!!!!!!!!!!!"
+					write(*,*)"YOU CAN TERMINATE YOUR CODE or WAIT for BETTER by MC after several more MC runs!!!!!!!!!!!"
 					write(*,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
 
 					write(101,*)"***keepNo = 0, All atoms with larger scoring values have been processed!!***"
-					write(101,*)"YOU CAN TERMINATE YOUR CODE !!!!!!!!!!!"
-					pause
+					write(101,*)"YOU CAN TERMINATE YOUR CODE after several more MC runs  !!!!!!!!!!!"
+					
 				endif 
 	
 				write(101,*)""
@@ -198,9 +201,11 @@ do 112 imc=1,iterMC
                 endif
                 naccept = 0 ! activate a new counter
             endif
-!! generate the next 
+!! generate the next
+     !       print*,"kshuffle-1" 
             call kshuffle(imc)
-            
+      !      print*,"kshuffle-2" 
+
             !call lmpdata("00MC",imc)
 112 continue
 

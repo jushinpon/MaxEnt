@@ -12,8 +12,10 @@ do 1 i=1,natom
              confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
              atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
            else
-             confentropy = confentropy + weight(ine)
-             atomentropy(i) = atomentropy(i) + weight(ine)                     
+             if(atype(i) .eq. atype(JID))then !only consider atoms with the same type
+				confentropy = confentropy + weight(ine)
+				atomentropy(i) = atomentropy(i) + weight(ine)                     
+             endif           
            endif		  
 		  !if(atype(i) .eq. atype(JID))then
           !   confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
