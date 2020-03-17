@@ -13,7 +13,7 @@ PROGRAM MAXEnt
 	!!!integer ( kind = 4 ) thread_num          !!!!!!!!!
     real*8 Boltz,r,ini_acceptratio
     integer NN(5)
-    !CALL random_seed()
+    CALL random_seed()
     !call init_random_seed(123)
 	call general_para ! activate all parameters
     call celllist ! get topology of system
@@ -68,7 +68,7 @@ PROGRAM MAXEnt
  
         endif
         111 continue
-
+!pause
         write(101,*)"***** The following is MC output"
         write(101,*)""
         ! Use the best configuration after the above random search
@@ -99,6 +99,7 @@ do 112 imc=1,iterMC
           write(*,*)"*** CURRENT best:",Entmin/dble(natom)
 		  write(*,*) "*** The first three nearest neighbour numbers for current best***"	
           write(*,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2			  
+          write(*,*) "KeepNo in SCF sub:",keepNo,"natom:",natom, "fraction: ",dble(keepNo)/dble(natom)			
 		  write(*,*)""
 		endif 
 !**************** by OMP
@@ -137,6 +138,8 @@ do 112 imc=1,iterMC
                 write(101,*)"The searched configuration No : ",nbetter
                 write(101,*) "***current normalized configurational entropy: ",confentropy/dble(natom)
                 write(101,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.			
+                write(101,*) "KeepNo in SCF sub:",keepNo,"natom:",natom, "fraction: ",dble(keepNo)/dble(natom)			
+
                 if(keepNo .eq. 0 )then !all bad atoms are done
                     write(*,*)"#MC process at MC step:", imc
 					write(*,*)"***keepNo = 0, All atoms with larger scoring values have been processed!!***"
@@ -153,6 +156,8 @@ do 112 imc=1,iterMC
 				write(*,*) "***current MC setp for this configuration:",imc				
                 write(*,*)"Normalized configurational entropy: ",confentropy/dble(natom)
 				write(*,*) "***N1:",NN(1)/2," ***N2",NN(2)/2," ***N3",NN(3)/2," ***N4",NN(4)/2," ***N5",NN(5)/2	! the corresponding NN atom No.	
+				write(*,*) "KeepNo in SCF sub:",keepNo,"natom:",natom, "fraction: ",dble(keepNo)/dble(natom)			
+
                 write(*,*)""
 
             endif

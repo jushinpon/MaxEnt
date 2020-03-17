@@ -8,19 +8,17 @@ do 1 i=1,natom
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID)
-           if(ine .le. 1)then !first neighbour atoms
-             confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
-             atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
-           else
+!           if(ine .le. 1 .and. atype(i) .eq. atype(JID))then !first neighbour atoms
+!             confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
+!             atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
+!             
+!           else
              if(atype(i) .eq. atype(JID))then !only consider atoms with the same type
 				confentropy = confentropy + weight(ine)
-				atomentropy(i) = atomentropy(i) + weight(ine)                     
+				atomentropy(i) = atomentropy(i) + weight(ine)
+                    
              endif           
-           endif		  
-		  !if(atype(i) .eq. atype(JID))then
-          !   confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
-          !   atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
-          !endif 
+!           endif		  
 3 		continue                      
 2   continue
    ! write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						

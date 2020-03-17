@@ -231,7 +231,6 @@ zmin = z
 
 atkeep =atype ! keep the atom types
 
-
 !assign atom types
 if(assigntype)then
 	ncounter = 0 
@@ -255,52 +254,18 @@ endif
 	  
 allocate(CN_No(natom,5)) ! consider five neighbor types
 allocate(CN_ID(natom,5,50)) ! consider five neighbor types and corresponding IDs.
-! assume the maximal number is 50. 
-CN_No = 0
-CN_ID = 0
+! assume the maximal number is 50.
+
 !write(*,*)'1'
 ! B2 rdf peaks by MS for a B2 unit cell (lattice constant = 1)
 ! 0.87 1.0 1.41 1.65 1.73 
 !!!!!!!!!!!!!!
+
 rdfpeak(1)=0.72
 rdfpeak(2)=1.02
 rdfpeak(3)=1.24
 rdfpeak(4)=1.425
 rdfpeak(5)=1.6
-!write(*,*)'2'
-weight = 1.d0
-weightbase = 1.d0 
-weight(1) = weightbase*1.e3 !first Id is the neighbour ID, the second is atom type
-weight(2) = weightbase*0.0
-weight(3) = weightbase*(-1.0)
-weight(4) = weightbase*(-1.e-2) !not used 
-weight(5) = weightbase*(-1.e-1) !not used
-
- !6 is the second nearest Number of a reference atom
-pairweight = dble(weight(1)) ! initial values for all pairs
-!pairweight = 1.0 ! initial values for all pairs
-pairweight(1,2) = -4.566
-pairweight(1,3) = -3.966
-pairweight(1,4) = -5.467
-pairweight(1,5) = -4.783
-pairweight(2,1) = -4.566
-pairweight(2,3) = -4.899
-pairweight(2,4) = -6.373
-pairweight(2,5) = -5.510
-pairweight(3,1) = -3.966
-pairweight(3,2) = -4.899
-pairweight(3,4) = -4.985
-pairweight(3,5) = -4.979
-pairweight(4,1) = -5.467
-pairweight(4,2) = -6.373
-pairweight(4,3) = -4.985
-pairweight(4,5) = -6.738
-pairweight(5,1) = -4.783
-pairweight(5,2) = -5.510
-pairweight(5,3) = -4.979
-pairweight(5,4) = -6.738
-pairweight = pairweight/dble(weight(1))
-!pairweight = 1.0
 
 !write(*,*)'3'
 !!!!!!!!!!!!!!

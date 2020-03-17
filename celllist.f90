@@ -12,7 +12,8 @@ use information
 implicit real*8(a-h,o-z)   
 integer,allocatable::binpnt(:),bin(:)
 integer nxcell,nycell,nzcell
-dimension del(3)
+dimension del(3),ave_counter(5)
+
 ! we need to modify the value of original rlist first
 nxcell = 0
 nycell = 0
@@ -169,6 +170,60 @@ do 3 i=1,natom
 
 deallocate(binpnt)
 deallocate(bin)
+
+ave_counter = 0
+
+do 111 i=1,natom
+	 xtmp=x(i)													 
+	 ytmp=y(i)
+	 ztmp=z(i)
+	do 211 ine =1,3 !neighbor atom type		
+       ave_counter(ine) = ave_counter(ine)+CN_No(i,ine)                     
+211   continue
+   ! write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						
+111 continue
+
+ave_counter = ave_counter/dble(natom) !get the average nearest neighbour atoms
+
+do i =1,5
+print *,"********average atom number for ",i, "neighbours: ",ave_counter(i)
+enddo
+!pause
+!write(*,*)'2'
+weight = 1.d0
+weight(1) = 1.e6 !first Id is the neighbour ID, the second is atom type
+weight(2) = 10.
+!more than 1/3 third neighbour atoms are different types can make atomentropy lower than 0
+weight(3) = -(weight(2)*ave_counter(2)/2.0) / (ave_counter(3)/5.0)  
+weight(4) = (-1.e-2) !not used 
+weight(5) = (-1.e-1) !not used
+
+ !6 is the second nearest Number of a reference atom
+pairweight = dble(weight(1)) ! initial values for all pairs
+!pairweight = 1.0 ! initial values for all pairs
+pairweight(1,2) = 0.0 !-4.566
+pairweight(1,3) = 0.0 !-3.966
+pairweight(1,4) = 0.0 !-5.467
+pairweight(1,5) = 0.0 !-4.783
+pairweight(2,1) = 0.0 !-4.566
+pairweight(2,3) = 0.0 !-4.899
+pairweight(2,4) = 0.0 !-6.373
+pairweight(2,5) = 0.0 !-5.510
+pairweight(3,1) = 0.0 !-3.966
+pairweight(3,2) = 0.0 !-4.899
+pairweight(3,4) = 0.0 !-4.985
+pairweight(3,5) = 0.0 !-4.979
+pairweight(4,1) = 0.0 !-5.467
+pairweight(4,2) = 0.0 !-6.373
+pairweight(4,3) = 0.0 !-4.985
+pairweight(4,5) = 0.0 !-6.738
+pairweight(5,1) = 0.0 !-4.783
+pairweight(5,2) = 0.0 !-5.510
+pairweight(5,3) = 0.0 !-4.979
+pairweight(5,4) = 0.0 !-6.738
+pairweight = pairweight/dble(weight(1))
+!pairweight = 1.0
+
 !..................... finish cell list
 ! find the number of each second nearest atoms
 !do i=1,10

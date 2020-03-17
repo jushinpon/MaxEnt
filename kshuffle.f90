@@ -10,7 +10,7 @@ call random_number(r)
 !if(mod(imc,20).eq.0)then
 nkMCshift = dint(natom*0.05*r)+1
 !nkMCshift = 10
-if(nkMCshift .le. 10) nkMCshift = 20
+if(nkMCshift .lt. 10) nkMCshift = 10
 !write(*,*)"nkMCshift 1:",nkMCshift,imc
 !pause
 !else

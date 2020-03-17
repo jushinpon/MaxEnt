@@ -84,19 +84,14 @@ do 11 ip=1,ndup
        ntemp = CN_No(i,ine)
 		do 31 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) 
-		  if(ine .le. 1 )then !first neighbour atoms
-            ! confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
-             atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
-             
-           else
-             !confentropy = confentropy + weight(ine)
+		!  if(ine .le. 1 .and. atype(i) .eq. atype(JID))then !first neighbour atoms
+        !     atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
+        !     
+        !   else
              if(atype(i) .eq. atype(JID))then
 				atomentropy(i) = atomentropy(i) + weight(ine)
              endif                     
-           endif
-		 ! if(atype(i) .eq. atype(JID))then             
-         !    atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
-         ! endif 
+        !   endif
 31 		continue                      
 21   continue
   	confentropy = confentropy + atomentropy(i)					
