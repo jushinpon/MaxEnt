@@ -15,11 +15,15 @@ True True True
 1
 1
 #! need to assign atom types or not(True or False)
-True
+False
 #! how you build your structure (cfg, data, or default)
-default
+data
 #! data file name (If the above is default, this is fake)
-00MC_00077.data
+00MC_00004.data
+#! need to supercell or not(True or False)
+True
+#! N x N x N (supercell for data)
+2 2 2
 # ! atom number per unit cell
 4
 #! fractional coordinates of each atom in the unit cellp

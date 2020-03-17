@@ -8,10 +8,10 @@ implicit real*8(a-h,o-z)
 integer nx,ny,nz,natom_unit,nkMCshift ! replicate unit cell times in x, y, z dimensions,atom number in unit cell 
 integer elemtype!total element type number, atom type
 logical pbcx, pbcy, pbcz
-real*8,allocatable::x(:),y(:),z(:),xkeep(:),ykeep(:),zkeep(:),atkeep(:),minatkeep(:)
+real*8,allocatable::x(:),y(:),z(:),sx(:),sy(:),sz(:),xkeep(:),ykeep(:),zkeep(:),atkeep(:),minatkeep(:)
 real*8,allocatable::xmin(:),ymin(:),zmin(:),atomentropy(:),katomentropy(:),pairweight(:,:)
-integer,allocatable::CN_No(:,:),CN_ID(:,:,:),atype(:)
-integer natom,iterMC,inirand
+integer,allocatable::CN_No(:,:),CN_ID(:,:,:),atype(:),aid(:),tempatype(:)
+integer natom,iterMC,inirand,snatom
 character*30 name
 real*8 rdfpeak(5),weight(5),ux(10),uy(10),uz(10) ! the first five rdf peaks from MS and entropy weight
 real*8 xl,yl,zl,half_xl,half_yl,half_zl,rlist,confentropy,real_lattice
@@ -24,7 +24,7 @@ contains
 subroutine general_para
 implicit real*8(a-h,o-z)
 real shift
-logical assigntype
+logical assigntype,supercell
 real,allocatable::frac(:) ! atom fraction coordinate shift
 character*128 buildWay,filename,tempChar 
 
@@ -69,6 +69,14 @@ read(112,*)!#! data file name, if buildWay is cfg or data
 read(112,*)filename
 write(*,*)'file name to read for cfg or data: ',trim(filename)
 
+read(112,*)!#! need to supercell or not
+read(112,*)supercell
+write(*,*)'supercell: ',supercell
+
+read(112,*)!#! N x N x N
+read(112,*)nx,ny,nz
+write(*,*)nx,ny,nz
+
 select case (trim(buildWay))
    
 case ('cfg') 
@@ -87,15 +95,26 @@ case ('cfg')
 close(112)  ! close the handle of 00input.dat 
 
 case ('data')
-      print*, "read data file" 
-    open(111,file= trim(filename),status='old')  
-	read(111,*) ! comment
-	read(111,*)natom
-	read(111,*) elemtype
-	read(111,*)xlo, xhi
-	read(111,*)ylo, yhi
-	read(111,*)zlo, zhi
-	
+    print*, "read data file"
+	if(supercell)then 
+    	open(111,file= trim(filename),status='old')  
+		read(111,*) ! comment
+		read(111,*)snatom
+		read(111,*) elemtype
+		read(111,*)xlo, xhi
+		read(111,*)ylo, yhi
+		read(111,*)zlo, zhi
+		natom=snatom*nx*ny*nz
+	else
+	    open(111,file= trim(filename),status='old')  
+		read(111,*) ! comment
+		read(111,*)natom
+		read(111,*) elemtype
+		read(111,*)xlo, xhi
+		read(111,*)ylo, yhi
+		read(111,*)zlo, zhi
+	endif
+
 	print*,"xlo, xhi: ",xlo, xhi
 	print*,"ylo, yhi: ",ylo, yhi
 	print*,"zlo, zhi: ",zlo, zhi
@@ -143,6 +162,12 @@ allocate (atomentropy(natom))
 allocate (katomentropy(natom)) ! keep atom potential for the current best
 allocate (keepeID(natom))
 
+allocate (aid(snatom))
+allocate (tempatype(snatom))
+allocate (sx(snatom))
+allocate (sy(snatom))
+allocate (sz(snatom))
+
 !!! get coordinates of all atoms
 
 select case (trim(buildWay))
@@ -171,30 +196,64 @@ case ('cfg')
 	
 case ('data')
 	read(111,*) tempChar!skip ATOMs
-	!print*,tempChar
-	do 100 i=1,natom
-		read(111,*)id_atom,itempatype,tempx,tempy,tempz !If id not sorted by lammps       
-		x(id_atom)=tempx
-		y(id_atom)=tempy
-		z(id_atom)=tempz
-		atype(id_atom)=itempatype
-		if(i == natom)then
-			write(*,*)"show the coordinates of last atom for check"
-			write(*,*)id_atom,atype(id_atom),x(id_atom),y(id_atom),z(id_atom) !If id not sorted by lammps       
-        endif 
-	100 continue
-    close(111) ! close data file handle
-!move all atoms within the box
-	x = x - minval(x)
-	y = y - minval(y)
-	z = z - minval(z)
-	
-	xl = xhi-xlo
-	yl = yhi-ylo
-	zl = zhi-zlo
-	half_xl = xl/2.d0    
-	half_yl = yl/2.d0    
-	half_zl = zl/2.d0
+	if(supercell)then
+		do 190 i=1,snatom
+    		read(111,*)aid(i),tempatype(i),sx(i),sy(i),sz(i)
+    		!write(*,*)aid(i),tempatype(i),sx(i),sy(i),sz(i)
+		190 continue
+
+		IDcounter = 0
+		do 191 i=1,nx
+		    do 192 j=1,ny
+		        do 193 k=1,nz
+		            do 194 l=1,snatom
+		                IDcounter = IDcounter + 1
+						x(IDcounter)= sx(l) + xhi*(i-1) 
+						y(IDcounter)= sy(l) + yhi*(j-1) 
+						z(IDcounter)= sz(l) + zhi*(k-1)	
+						atype(IDcounter)= tempatype(l)
+		                !write(*,*)IDcounter,atype(IDcounter),x(IDcounter),y(IDcounter),z(IDcounter)
+		            194 continue
+		        193 continue
+		    192 continue
+		191 continue
+		close(111)
+		x = x - minval(x)
+		y = y - minval(y)
+		z = z - minval(z)
+
+		xl = (xhi-xlo)*nx
+		yl = (yhi-ylo)*ny
+		zl = (zhi-zlo)*nz
+		half_xl = xl/2.d0    
+		half_yl = yl/2.d0    
+		half_zl = zl/2.d0
+	else
+		!print*,tempChar
+		do 100 i=1,natom
+			read(111,*)id_atom,itempatype,tempx,tempy,tempz !If id not sorted by lammps       
+			x(id_atom)=tempx
+			y(id_atom)=tempy
+			z(id_atom)=tempz
+			atype(id_atom)=itempatype
+			if(i == natom)then
+				write(*,*)"show the coordinates of last atom for check"
+				write(*,*)id_atom,atype(id_atom),x(id_atom),y(id_atom),z(id_atom) !If id not sorted by lammps       
+    	    endif 
+		100 continue
+    	close(111) ! close data file handle
+		!move all atoms within the box
+		x = x - minval(x)
+		y = y - minval(y)
+		z = z - minval(z)
+
+		xl = xhi-xlo
+		yl = yhi-ylo
+		zl = zhi-zlo
+		half_xl = xl/2.d0    
+		half_yl = yl/2.d0    
+		half_zl = zl/2.d0
+	endif
 	
 case ('default')
 	IDcounter = 0
