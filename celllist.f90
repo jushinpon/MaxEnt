@@ -190,13 +190,25 @@ print *,"********average atom number for ",i, "neighbours: ",ave_counter(i)
 enddo
 !pause
 !write(*,*)'2'
-weight = 1.d0
-weight(1) = 1.e6 !first Id is the neighbour ID, the second is atom type
-weight(2) = 10.
-!more than 1/3 third neighbour atoms are different types can make atomentropy lower than 0
-weight(3) = -(weight(2)*ave_counter(2)/2.0) / (ave_counter(3)/5.0)  
-weight(4) = (-1.e-2) !not used 
-weight(5) = (-1.e-1) !not used
+if(second)then
+	write(*,*)'weight of 2nd neighborhood '
+	weight = 1.d0
+	weight(1) = 1.e6 !first Id is the neighbour ID, the second is atom type
+	weight(2) = 10.
+	!more than 1/3 third neighbour atoms are different types can make atomentropy lower than 0
+	weight(3) = -(weight(2)*ave_counter(2)/2.0) / (ave_counter(3)/5.0)  
+	weight(4) = (-1.e-2) !not used 
+	weight(5) = (-1.e-1) !not used
+else
+	write(*,*)'weight of 1st neighborhood '
+	weight = 1.d0
+	weightbase = 1.d0 
+	weight(1) = weightbase*1.e3 !first Id is the neighbour ID, the second is atom type
+	weight(2) = weightbase*0.0
+	weight(3) = weightbase*(-1.0)
+	weight(4) = weightbase*(-1.e-2) !not used 
+	weight(5) = weightbase*(-1.e-1) !not used
+endif
 
  !6 is the second nearest Number of a reference atom
 pairweight = dble(weight(1)) ! initial values for all pairs

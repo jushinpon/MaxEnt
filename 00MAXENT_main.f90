@@ -28,8 +28,9 @@ PROGRAM MAXEnt
     nbetter = 0
    ! call conf_entropy !first evaluation
     do 111 ini=1,inirand
-     
+        if(inirand .ne. 1)then
         call shuffle
+        endif
 		call conf_entropy
 
         if(mod(ini,1000) .eq. 0) write(*,*)"Initial shuffle iterations: ",ini
