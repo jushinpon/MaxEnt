@@ -1,11 +1,11 @@
 # The input file for MaxEnt developed by Prof. Shin-Pon Ju
 ####### begin below
 #!the total MC iteration times,te total initial random search times
-500000 1
+500000 10
 #! PBC in x, y, and z
 True True True 
 #! rlist for cell list for the third nearest neighbour atoms
-5.5
+1.25
 #!element type for HEA
 5
 #!element fractions
@@ -17,15 +17,13 @@ True True True
 #! need to assign atom types or not(True or False)
 False
 #! how you build your structure (cfg, data, or default)
-cfg
+data
 #! data file name (If the above is default, this is fake)
-777.cfg
+00MC_00004.data
 #! need to supercell or not(True or False)
-False
+True
 #! N x N x N (supercell for data)
 2 2 2
-#! use exclude second neighbor(True or False)
-False
 # ! atom number per unit cell
 4
 #! fractional coordinates of each atom in the unit cellp

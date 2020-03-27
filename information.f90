@@ -18,7 +18,6 @@ real*8 xl,yl,zl,half_xl,half_yl,half_zl,rlist,confentropy,real_lattice
 real*8 Entmin,kT,Entkeep,acceptratio,filterValue ! for MC
 integer nadjust,naccept,keepNo ! for MC and counter for keeping ID with the large scoring values 
 integer,allocatable:: keepeID(:) ! keep ID with the large scoring values
-logical second
 
 contains
 !*********************************************
@@ -78,10 +77,6 @@ read(112,*)!#! N x N x N
 read(112,*)nx,ny,nz
 write(*,*)nx,ny,nz
 
-read(112,*)!use exclude second neighbor
-read(112,*)second
-write(*,*)'use exclude second neighbor: ',second
-
 select case (trim(buildWay))
    
 case ('cfg') 
@@ -96,7 +91,6 @@ case ('cfg')
 	read(1111,*)ylo, yhi
 	read(1111,*)zlo, zhi
 	read(1111,*) !ITEM: ATOMS id type x y z
-	snatom = natom
 	
 close(112)  ! close the handle of 00input.dat 
 
@@ -180,12 +174,12 @@ select case (trim(buildWay))
    
 case ('cfg') 
 	do 1001 i=1,natom
-		read(1111,*)aid(i),atype(i),x(i),y(i),z(i) !If id not sorted by lammps       
-		!x(id_atom)=tempx
-		!y(id_atom)=tempy
-		!z(id_atom)=tempz
-		!atype(id_atom)=itempatype
-		!write(*,*)id_atom,atype(id_atom),x(id_atom),y(id_atom),z(id_atom) !If id not sorted by lammps       
+		read(1111,*)id_atom,itempatype,tempx,tempy,tempz !If id not sorted by lammps       
+		x(id_atom)=tempx
+		y(id_atom)=tempy
+		z(id_atom)=tempz
+		atype(id_atom)=itempatype
+		write(*,*)id_atom,atype(id_atom),x(id_atom),y(id_atom),z(id_atom) !If id not sorted by lammps       
 	1001 continue
     close(1111) ! close data file handle
 !move all atoms within the box
@@ -326,16 +320,11 @@ allocate(CN_ID(natom,5,50)) ! consider five neighbor types and corresponding IDs
 ! 0.87 1.0 1.41 1.65 1.73 
 !!!!!!!!!!!!!!
 
-!rdfpeak(1)=0.72
-!rdfpeak(2)=1.02
-!rdfpeak(3)=1.24
-!rdfpeak(4)=1.425
-!rdfpeak(5)=1.6
-rdfpeak(1)=3.1
-rdfpeak(2)=4.4
-rdfpeak(3)=5.3
-rdfpeak(4)=10
-rdfpeak(5)=10
+rdfpeak(1)=0.72
+rdfpeak(2)=1.02
+rdfpeak(3)=1.24
+rdfpeak(4)=1.425
+rdfpeak(5)=1.6
 
 !write(*,*)'3'
 !!!!!!!!!!!!!!
