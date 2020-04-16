@@ -1,0 +1,2281 @@
+./maxent.exe rlist:    1.2500000000000000     
+ element type for HEA:            5
+ fraction            1   1.00000000    
+ fraction            2   1.00000000    
+ fraction            3   1.00000000    
+ fraction            4   1.00000000    
+ fraction            5   1.00000000    
+ assign atom types:  T
+ the way to build sructure: default
+ file name to read for cfg or data: 00MC_00004.data
+ use default way
+ ! atom number per unit cell:            4
+ atom ID in unit cell:            1
+ atom ID in unit cell:            2
+ atom ID in unit cell:            3
+ atom ID in unit cell:            4
+           3           3           3
+ ***current RANDOM searched better configuration No.:            1
+ Normalized configurational entropy:    2185.1547030166344     
+ call again Normalized configurational entropy:    2185.1547030166344     
+ 
+ ***N1:         121  ***N2          62  ***N3         246  ***N4           0  ***N5           0
+ ***current RANDOM searched better configuration No.:            2
+ Normalized configurational entropy:    2147.8523141013252     
+ call again Normalized configurational entropy:    2147.8523141013252     
+ 
+ ***N1:         119  ***N2          60  ***N3         243  ***N4           0  ***N5           0
+ ******current MC searched better configuration No.:            1
+ ***current MC setp for this configuration:           1
+ Normalized configurational entropy:    155.34470281777558     
+ ***N1:          12  ***N2         157  ***N3         306  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            2
+ ***current MC setp for this configuration:           2
+ Normalized configurational entropy:    136.71385097503662     
+ ***N1:          11  ***N2         160  ***N3         301  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            3
+ ***current MC setp for this configuration:          19
+ Normalized configurational entropy:    136.29353614206667     
+ ***N1:          11  ***N2         142  ***N3         334  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            4
+ ***current MC setp for this configuration:          30
+ Normalized configurational entropy:    135.58581393736381     
+ ***N1:          11  ***N2         144  ***N3         353  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            5
+ ***current MC setp for this configuration:          31
+ Normalized configurational entropy:    98.368425042540935     
+ ***N1:           9  ***N2         146  ***N3         349  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            6
+ ***current MC setp for this configuration:          40
+ Normalized configurational entropy:    98.260554666872380     
+ ***N1:           9  ***N2         147  ***N3         355  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            7
+ ***current MC setp for this configuration:          44
+ Normalized configurational entropy:    79.837776899337769     
+ ***N1:           8  ***N2         145  ***N3         349  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:           50
+ Ave confentropy:   98.309906518017797     
+ *** CURRENT best:   79.837776899337769     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           8  ***N2         145  ***N3         349  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            8
+ ***current MC setp for this configuration:          52
+ Normalized configurational entropy:    79.798943546083237     
+ ***N1:           8  ***N2         144  ***N3         357  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:            9
+ ***current MC setp for this configuration:          53
+ Normalized configurational entropy:    61.373369464167844     
+ ***N1:           7  ***N2         152  ***N3         350  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:           10
+ ***current MC setp for this configuration:          54
+ Normalized configurational entropy:    61.069202802799367     
+ ***N1:           7  ***N2         150  ***N3         357  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:           11
+ ***current MC setp for this configuration:          66
+ Normalized configurational entropy:    23.786758352209020     
+ ***N1:           5  ***N2         145  ***N3         361  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:           12
+ ***current MC setp for this configuration:          78
+ Normalized configurational entropy:    5.2784620567604348     
+ ***N1:           4  ***N2         151  ***N3         356  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          100
+ Ave confentropy:   23.904517624113296     
+ *** CURRENT best:   5.2784620567604348     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         356  ***N4           0  ***N5           0
+ 
+ ******current MC searched better configuration No.:           13
+ ***current MC setp for this configuration:         100
+ Normalized configurational entropy:    5.2250546526025845     
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          150
+ Ave confentropy:   42.479221326333509     
+ *** CURRENT best:   5.2250546526025845     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          200
+ Ave confentropy:   42.487332441188670     
+ *** CURRENT best:   5.2250546526025845     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          250
+ Ave confentropy:   42.379906513072825     
+ *** CURRENT best:   5.2250546526025845     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          300
+ Ave confentropy:   172.59957321484885     
+ *** CURRENT best:   5.2250546526025845     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          350
+ Ave confentropy:   98.024573184825755     
+ *** CURRENT best:   5.2250546526025845     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           4  ***N2         151  ***N3         358  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ ******current MC searched better configuration No.:           14
+ ***current MC setp for this configuration:         362
+ Normalized configurational entropy:   -12.778945340050591     
+ ***N1:           3  ***N2         161  ***N3         324  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ #MC process at MC step:         366
+ ***keepNo = 0, All atoms with larger scoring values have been processed!!***
+ YOU CAN TERMINATE YOUR CODE or WAIT for BETTER by MC after several more MC runs!!!!!!!!!!!
+ ***N1:           0  ***N2         164  ***N3         328  ***N4           0  ***N5           0
+ ******current MC searched better configuration No.:           15
+ ***current MC setp for this configuration:         366
+ Normalized configurational entropy:   -68.629778685393163     
+ ***N1:           0  ***N2         164  ***N3         328  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          400
+ Ave confentropy:   24.448332433347350     
+ *** CURRENT best:  -68.629778685393163     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           0  ***N2         164  ***N3         328  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          450
+ Ave confentropy:   5.9001287266060158     
+ *** CURRENT best:  -68.629778685393163     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           0  ***N2         164  ***N3         328  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ 
+ 
+ ##********  MC iterations:          500
+ Ave confentropy:  -50.084778679741753     
+ *** CURRENT best:  -68.629778685393163     
+ *** The first three nearest neighbour numbers for current best***
+ ***N1:           0  ***N2         164  ***N3         328  ***N4           0  ***N5           0
+ 
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2
+ kshuffle-2
+ kshuffle-1
+ in kshuffle before do 1
+ in kshuffle after do 2

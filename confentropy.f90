@@ -4,7 +4,7 @@ implicit real*8(a-h,o-z)
 confentropy = 0.0 ! configurational entropy
 atomentropy = 0.0 ! entropy of each atom for normshuffle, set 1 for inital
 do 1 i=1,natom
-	do 2 ine =1,3 !neighbor atom type
+	do 2 ine =1,1 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID)
@@ -21,9 +21,9 @@ do 1 i=1,natom
 !           endif		  
 3 		continue                      
 2   continue
-   ! write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						
+!    write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						
 1 continue
-
+!pause
 !! The following is used for detailed check
 
 !do 123 i=1,natom

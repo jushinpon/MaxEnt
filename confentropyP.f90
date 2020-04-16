@@ -38,7 +38,7 @@ do 1 ip=1,2
 				endif
 
 !!the following is to analyze the neighbour atoms of two ipair atoms
-	do 2 ine =1,3 !neighbor atom type
+	do 2 ine =1,1 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) ! the nth neighbor atom ID of i
@@ -80,7 +80,7 @@ confentropy = confentropy - pconfentropy ! deduct those changed after swap
 do 11 ip=1,ndup
   i = ikeep(ip)
   atomentropy(i) = 0.0
-	do 21 ine =1,3 !neighbor atom type
+	do 21 ine =1,1 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 31 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) 

@@ -21,7 +21,7 @@ if(nkMCshift .lt. 10) nkMCshift = 10
 !nkMCshift = 1
 !print*, "in kshuffle before do 1, nkMCshift",nkMCshift
 do 1 ikMC=1, nkMCshift
-  
+
 	call random_number(r)	
 	
     temp = r*confentropy

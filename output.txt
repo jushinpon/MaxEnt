@@ -1,0 +1,25 @@
+ rlist:    1.2500000000000000     
+ element type for HEA:            5
+ fraction            1   1.00000000    
+ fraction            2   1.00000000    
+ fraction            3   1.00000000    
+ fraction            4   1.00000000    
+ fraction            5   1.00000000    
+ assign atom types:  F
+ the way to build sructure: data
+ file name to read for cfg or data: 00MC_00072.data
+ supercell:  T
+           4           3           3
+ weight of second:  F
+ read data file
+ xlo, xhi:    0.0000000000000000        9.0000000000000000     
+ ylo, yhi:    0.0000000000000000        7.0000000000000000     
+ zlo, zhi:    0.0000000000000000        9.0000000000000000     
+ ********average atom number for            1 neighbours:    12.000000000000000     
+ ********average atom number for            2 neighbours:    5.9629629629629628     
+ ********average atom number for            3 neighbours:    23.851851851851851     
+ ********average atom number for            4 neighbours:    0.0000000000000000     
+ ********average atom number for            5 neighbours:    0.0000000000000000     
+ weight of 1st neighborhood 
+ kshuffle           1
+ ***Calling rearrange now at            1

@@ -18,15 +18,15 @@ real*8 xl,yl,zl,half_xl,half_yl,half_zl,rlist,confentropy,real_lattice
 real*8 Entmin,kT,Entkeep,acceptratio,filterValue ! for MC
 integer nadjust,naccept,keepNo ! for MC and counter for keeping ID with the large scoring values 
 integer,allocatable:: keepeID(:) ! keep ID with the large scoring values
-logical second
+logical second,supercell
 
 contains
 !*********************************************
 subroutine general_para
 implicit real*8(a-h,o-z)
 real shift
-logical assigntype,supercell
-real,allocatable::frac(:) ! atom fraction coordinate shift
+logical assigntype
+real,allocatable::frac(:),tempfrac(:) ! atom fraction coordinate shift
 character*128 buildWay,filename,tempChar 
 
 call system('rm -rf output')
@@ -48,6 +48,7 @@ write(*,*)'element type for HEA: ',elemtype
 read(112,*)!element fractions
 
 allocate (frac(elemtype))
+allocate (tempfrac(elemtype))
 allocate (pairweight(elemtype,elemtype)) !! weighting for different pairs
 
 total = 0.0
@@ -298,19 +299,60 @@ atkeep =atype ! keep the atom types
 
 !assign atom types
 if(assigntype)then
-	ncounter = 0 
-	do 11 i=1,elemtype-1
-	ielement = nint( dble(natom)*frac(i) ) ! round to the closest integer
+	!ncounter = 0 
+	!do 11 i=1,elemtype-1
+	!ielement = nint( dble(natom)*frac(i) ) ! round to the closest integer
+	!do j = 1,ielement
+	!	ncounter = ncounter + 1 ! atom counter for assigned atom type
+	!	atype(ncounter) = i !assign atom type
+	!enddo
+	!11 continue
+	!! assign the last element type
+	!do 12 i = ncounter+1,natom
+	!	atype(i) = elemtype ! the last element type (largest type ID)
+	!	!write(*,*)i,atype(i)
+	!12 continue
+! put the first 20 atoms into the system
+	if(natom .lt. 10)then
+		print *,"Your total atom number cannot fewer than 10"
+		pause
+	endif
+	tempfrac = 0
+	ncounter = 0
+    do 11 i=1,elemtype-1
+	ielement = nint( dble(10)*frac(i) ) ! round to the closest integer
 	do j = 1,ielement
 		ncounter = ncounter + 1 ! atom counter for assigned atom type
 		atype(ncounter) = i !assign atom type
+		tempfrac(i) = tempfrac(i) + 1
 	enddo
 	11 continue
 	! assign the last element type
-	do 12 i = ncounter+1,natom
+	do 12 i = ncounter+1,10
 		atype(i) = elemtype ! the last element type (largest type ID)
+		tempfrac(elemtype) = tempfrac(elemtype) + 1
 		!write(*,*)i,atype(i)
 	12 continue
+
+	do 111 i=11,natom
+		fracsum = 0.0
+		tfrac = 0.0
+		do j = 1,elemtype
+			fracsum = fracsum + frac(j)
+			tfrac = tfrac + tempfrac(j)/dble(i)
+			if (tfrac .lt.fracsum)then
+				atype(i) = j
+				tempfrac(j) = tempfrac(j) + 1
+				exit
+			endif
+		enddo
+111 continue
+
+	do ifrac =1,elemtype
+		print*,"element fraction ",ifrac, "assigned: ",frac(ifrac), "inserted: ",tempfrac(ifrac)/dble(natom)
+	enddo
+
+deallocate (tempfrac)
 endif
 	!write(*,*)ncounter, natom
 	!pause  
@@ -326,16 +368,16 @@ allocate(CN_ID(natom,5,50)) ! consider five neighbor types and corresponding IDs
 ! 0.87 1.0 1.41 1.65 1.73 
 !!!!!!!!!!!!!!
 
-rdfpeak(1)=3.1
-rdfpeak(2)=4.4
-rdfpeak(3)=5.3
-rdfpeak(4)=10
-rdfpeak(5)=10
-!rdfpeak(1)=0.72
-!rdfpeak(2)=1.02
-!rdfpeak(3)=1.24
-!rdfpeak(4)=1.425
-!rdfpeak(5)=1.6
+!rdfpeak(1)=3.1
+!rdfpeak(2)=4.4
+!rdfpeak(3)=5.3
+!rdfpeak(4)=10
+!rdfpeak(5)=10
+rdfpeak(1)=0.72
+rdfpeak(2)=1.02
+rdfpeak(3)=1.24
+rdfpeak(4)=1.425
+rdfpeak(5)=1.6
 
 !write(*,*)'3'
 !!!!!!!!!!!!!!

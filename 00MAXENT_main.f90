@@ -26,11 +26,21 @@ PROGRAM MAXEnt
 
     Entmin = 1.e30 ! initial entropy
     nbetter = 0
+    !print *,"***Calling first sub rearrange"
+    !call rearrange
    ! call conf_entropy !first evaluation
     do 111 ini=1,inirand
-        if (inirand .ne. 1)then
-            call shuffle
-        endif
+       ! if (.NOT. supercell)then
+       !     print *,"shuffle",ini
+           call shuffle
+        !else
+        !    print *,"kshuffle",ini
+        !    call kshuffle(inirand)
+        !endif
+        print *,"***Calling rearrange now at ", ini
+        call rearrange
+        print *,"after sub rearrange"
+
 		call conf_entropy
 
         if(mod(ini,1000) .eq. 0) write(*,*)"Initial shuffle iterations: ",ini
@@ -87,7 +97,10 @@ PROGRAM MAXEnt
         afterconfentropy = confentropy
         nbetter = 0
         naccept = 0
-
+       ! do i1 =1,natom
+       !     write(*,*)"atom ",i1," atomentropy: ",atomentropy(i1)  						
+       ! enddo
+       ! pause
 do 112 imc=1,iterMC
             !acceptratio gradually becomes smaller with the increasing MC step, like annealing
             acceptratio = ini_acceptratio - ( dble(imc)/dble(iterMC) )*0.4 !! lowest: 0.5 (from 0.9)
@@ -104,9 +117,17 @@ do 112 imc=1,iterMC
 		  write(*,*)""
 		endif 
 !**************** by OMP
-
-		  call SCF ! use each poossile pair to get the best final atype
-
+      !   do i1 =1,natom
+      !      write(*,*)"atom ",i1," atomentropy: ",atomentropy(i1)  						
+      !  enddo
+      !  print *," Before SCF"
+      !  pause
+		  call SCF(imc) ! use each poossile pair to get the best final atype
+      !  do i1 =1,natom
+      !      write(*,*)"atom ",i1," atomentropy: ",atomentropy(i1)  						
+      !  enddo
+      !  print *," After SCF"
+      !  pause
 		afterconfentropy = confentropy
     
 ! output the lowest potential, atype, atomentropy 
@@ -233,3 +254,4 @@ include 'confentropy.f90'
 include 'init_random_seed.f90'
 include 'confentropyP.f90'
 include 'SCF.f90'
+include 'rearrange.f90'
