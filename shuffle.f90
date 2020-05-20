@@ -1,6 +1,8 @@
-subroutine shuffle
-use information
+subroutine shuffle(natom,atype)
 implicit real*8(a-h,o-z)   
+!use information
+integer natom
+integer atype(natom)
 integer :: i, randpos, temp
 real :: r
 

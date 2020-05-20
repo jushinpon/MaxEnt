@@ -1,15 +1,24 @@
-subroutine SCF(imc)
-
-use information
+subroutine SCF (tid,natom,atype,confentropy,atomentropy,filterValue,keepNo,weight,CN_No,CN_ID)
+!use information
 implicit real*8(a-h,o-z)
-integer ( kind = 4 ) tid
-integer iscf,ishift,imc 
+integer iscf,ishift 
 real*8  oldconfentropy,SCFEntmin,SCFatomentropy(natom)
 real*8  oldSCFatomentropy(natom)
 real*8  newent,oldent,SCFatkeep(natom)
 
+integer tid,natom,keepeID(natom),CN_No(natom,5),CN_ID(natom,5,50) 
+real*8 filterValue,weight(5) 
+integer,INTENT(INOUT) :: keepNo,atype(natom)
+real*8,INTENT(INOUT) :: confentropy
+real*8,INTENT(INOUT) :: atomentropy(natom)
+
+ 
+!print*,"natom",natom
+!print*,"atype",atype
+!print*,"confentropy",confentropy
+!print*,"atomentropy",atomentropy
+!print*,"filterValue",filterValue
 !pause
-!!!!!call omp_set_num_threads(1)
 
 SCFEntmin = confentropy ! set the new value after 
 SCFatkeep = atype
@@ -17,28 +26,20 @@ SCFatomentropy = atomentropy
 newent = 1.		! set different values for the first dowhile
 oldent = 1.e20
 iscf=0		
- print *,"******MC iterations: ",imc
 
 do while (oldent .ne. newent)
 keepNo = 0
 do i = 1,natom
-	if(atomentropy(i) .gt. filterValue)then
+	if(atomentropy(i) .ge. filterValue)then
 		keepNo = keepNo + 1
 		keepeID(keepNo) = i
 	endif	
 enddo	 
+!print*,"keepeID",keepeID(keepNo)
 
  iscf = iscf + 1 
- print *,"SCF times: ",iscf,"keepNo: ",keepNo
-
  oldent = newent
 
-!$OMP PARALLEL &
-!$OMP shared(SCFEntmin,SCFatkeep,SCFatomentropy,atype) &
-!$OMP private(jj,ishift,oldSCFatomentropy,oldconfentropy)&
-!$OMP firstprivate(confentropy,atomentropy,natom)
-
-!$OMP do
 icheck = 1
    do  ii1=1, keepNo-1           
 
@@ -47,7 +48,7 @@ icheck = 1
         ii = keepeID(ii1)
         jj = keepeID(jj1)		
 	   
-	   if(atype(ii) .ne. atype(jj).and.atomentropy(ii) .ge. filterValue.and.atomentropy(jj).ge.filterValue) then	        !ne 不等於
+	   if(atype(ii) .ne. atype(jj).and.atomentropy(ii) .ge. filterValue.and.atomentropy(jj).ge.filterValue) then
 	      ishift = atype(ii)
           atype(ii) = atype(jj)
           atype(jj) = ishift
@@ -56,17 +57,15 @@ icheck = 1
 		  
 		  temp = confentropy
 		
-		  call conf_entropyP(ii,jj) !get new confentropy
-			if(confentropy .lt. SCFEntmin)then     !小於
+		  call conf_entropyP(ii,jj,natom,atype(:),confentropy,atomentropy(:),weight(:),CN_No(:,:),CN_ID(:,:,:)) !get new confentropy
+			if(confentropy .lt. SCFEntmin)then    
 			!
 			! must work for the first time
-			    !$OMP CRITICAL 
 				icheck = 0
-                SCFEntmin = confentropy
+        SCFEntmin = confentropy
 				
 				SCFatomentropy = atomentropy				
                 SCFatkeep = atype
-		       !$OMP END CRITICAL 
             else
 				ishift = atype(jj)
                 atype(jj) = atype(ii)
@@ -75,23 +74,21 @@ icheck = 1
                 atomentropy = oldSCFatomentropy   
 				
             endif
-!!			
+
        endif
 	  
 	  end do                      !2 continue
 	 
 	 end do   	 !1 continue
 	 
-!$OMP END do
-
-!$OMP END PARALLEL
-
  atype = SCFatkeep
  atomentropy = SCFatomentropy
  confentropy = SCFEntmin
  newent = SCFEntmin
+ 
   !if(newent .eq. oldent) then
-  if(icheck .eq. 1 .or. iscf .gt. 100) then !no further decrease by swap
+  !if(icheck .eq. 1 .or. iscf .gt. 30) then !no further decrease by swap
+  if(icheck .eq. 1 .or. iscf .gt. 30) then !no further decrease by swap
   
   confentropy = SCFEntmin
   atomentropy = SCFatomentropy
@@ -102,6 +99,6 @@ icheck = 1
   endif 
             
 enddo
-
+!print*,"confentropy",confentropy
 return
 end

@@ -1,10 +1,16 @@
-subroutine conf_entropy
-use information
-implicit real*8(a-h,o-z)   
+subroutine conf_entropy(tid,natom,atype,confentropy,atomentropy,weight,CN_No,CN_ID)
+!use information
+implicit real*8(a-h,o-z)  
+integer tid,natom
+real*8 weight(5)
+integer atype(natom),CN_No(natom,5),CN_ID(natom,5,50)
+real*8,INTENT(OUT) :: confentropy
+real*8,INTENT(OUT) :: atomentropy(natom)
+
 confentropy = 0.0 ! configurational entropy
 atomentropy = 0.0 ! entropy of each atom for normshuffle, set 1 for inital
 do 1 i=1,natom
-	do 2 ine =1,1 !neighbor atom type
+	do 2 ine =1,3 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID)
@@ -21,9 +27,9 @@ do 1 i=1,natom
 !           endif		  
 3 		continue                      
 2   continue
-!    write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						
+   ! write(*,*)"atom ",i," atomentropy: ",atomentropy(i)  						
 1 continue
-!pause
+
 !! The following is used for detailed check
 
 !do 123 i=1,natom

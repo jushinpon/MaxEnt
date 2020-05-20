@@ -1,9 +1,16 @@
-subroutine kshuffle(imc)
-use information
+subroutine kshuffle(tid,imc,natom,atype,confentropy,atomentropy,weight,CN_No,CN_ID)
+!use information
 implicit real*8(a-h,o-z)   
 integer i1,i2,ishift,imc,iposNo
-real*8 :: r,temp,tempent,tempconfentropy
-integer  positiveID(natom) !
+real*8 r,temp,tempent,tempconfentropy
+integer positiveID(natom) 
+
+integer tid,nkMCshift,natom
+real*8 weight(5)
+integer CN_No(natom,5),CN_ID(natom,5,50)
+integer,INTENT(INOUT) :: atype(natom)
+real*8,INTENT(INOUT) :: confentropy
+real*8,INTENT(INOUT) :: atomentropy(natom)
 
 call random_number(r)
 !nkMCshift gradually becomes smaller with the increasing MC steps
@@ -77,7 +84,7 @@ if (irepeat .gt. 200) goto 12345 ! go to randomly pick another atoms
     atype(i2) = ishift  
  !   print*, "in kshuffle before conf_entropyP",i1,i2
 
-  call conf_entropyP(i1,i2)     
+  call conf_entropyP(i1,i2,natom,atype,confentropy,atomentropy,weight,CN_No,CN_ID)     
   ! print*, "in kshuffle After_entropyP",i1,i2
 
 
@@ -98,7 +105,7 @@ else ! all atomentropy(i) are negative or goto 1112 over 100 times
 	itemp = atype(i1pos)
 	atype(i1pos) = atype(i2pos)
 	atype(i2pos) = itemp
-    call conf_entropyP(i1pos,i2pos)
+    call conf_entropyP(i1pos,i2pos,natom,atype,confentropy,atomentropy,weight,CN_No,CN_ID)
 endif
 
 1 continue ! atom type swap loop

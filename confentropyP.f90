@@ -1,8 +1,12 @@
-subroutine conf_entropyP(ii,jj)
-use information
+subroutine conf_entropyP(ii,jj,natom,atype,confentropy,atomentropy,weight,CN_No,CN_ID)
+!use information
 implicit real*8(a-h,o-z)   
 integer ii,jj ! the swapped atoms 
 integer::ikeep(500),ipair(2)
+
+integer natom
+real*8 weight(5),confentropy,atomentropy(natom)
+integer atype(natom),CN_No(natom,5),CN_ID(natom,5,50)
 
 ikeep = 0
 ipair(1) = ii
@@ -38,7 +42,7 @@ do 1 ip=1,2
 				endif
 
 !!the following is to analyze the neighbour atoms of two ipair atoms
-	do 2 ine =1,1 !neighbor atom type
+	do 2 ine =1,3 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 3 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) ! the nth neighbor atom ID of i
@@ -80,7 +84,7 @@ confentropy = confentropy - pconfentropy ! deduct those changed after swap
 do 11 ip=1,ndup
   i = ikeep(ip)
   atomentropy(i) = 0.0
-	do 21 ine =1,1 !neighbor atom type
+	do 21 ine =1,3 !neighbor atom type
        ntemp = CN_No(i,ine)
 		do 31 neID = 1,ntemp ! atom ID of a neighbor type
           JID = CN_ID(i,ine,neID) 

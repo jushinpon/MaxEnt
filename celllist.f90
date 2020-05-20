@@ -14,13 +14,6 @@ integer,allocatable::binpnt(:),bin(:)
 integer nxcell,nycell,nzcell
 dimension del(3),ave_counter(5)
 
-!for rearrange types
-integer,allocatable::temptype(:),occupied(:),CN_typeNo(:,:),minimumIDs(:)
-integer,allocatable::unoccupied(:)
-integer unoccupiedCount,itempid(2),minimumCounter
-
-
-
 ! we need to modify the value of original rlist first
 nxcell = 0
 nycell = 0
