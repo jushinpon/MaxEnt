@@ -1,0 +1,89 @@
+subroutine conf_entropy(tid,nthreads,natom,omp_natom,omp_weight,omp_atype,omp_CN_No,omp_CN_ID,confentropy,atomentropy)
+!use information
+implicit real*8(a-h,o-z)
+!integer natom
+!real*8 weight(5)
+!real*8,INTENT(OUT) :: confentropy
+!integer atype(natom),CN_No(natom,5),CN_ID(natom,5,50)
+!real*8,INTENT(OUT) :: atomentropy(natom)
+
+integer tid,ith,nthreads
+!real*8 weight(5)
+real*8 omp_weight(0:31,5)
+integer natom!,atype(natom),CN_No(natom,5),CN_ID(natom,5,50)
+integer omp_natom(0:31),omp_atype(0:31,natom),omp_CN_No(0:31,natom,5),omp_CN_ID(0:31,natom,5,50)
+real*8,INTENT(OUT) :: confentropy(0:31),atomentropy(0:31,natom)
+
+!omp_natom(ith)=natom
+!omp_weight(ith,:)=weight(:)
+!omp_atype(ith,:)=atype(:)
+!omp_CN_No(ith,:,:)=CN_No(:,:)
+!omp_CN_ID(ith,:,:,:)=CN_ID(:,:,:)
+
+!write(971,*)"tid",tid,"loop_num",ith,"natom",omp_natom(ith)
+!write(971,*)"tid",tid,"loop_num",ith,"weight",omp_weight(ith,:)
+!write(971,*)"tid",tid,"loop_num",ith,"atype",omp_atype(ith,:)
+!write(971,*)"tid",tid,"loop_num",ith,"CN_No",omp_CN_No(ith,:,:)
+!write(971,*)"tid",tid,"loop_num",ith,"CN_ID",omp_CN_ID(ith,:,:,:)
+
+confentropy = 0.0 ! configurational entropy
+atomentropy = 0.0 ! entropy of each atom for normshuffle, set 1 for inital
+do 1 i=1,omp_natom(tid)
+	do 2 ine =1,3 !neighbor atom type
+        ntemp = omp_CN_No(tid,i,ine)
+	    do 3 neID = 1,ntemp ! atom ID of a neighbor type
+            JID = omp_CN_ID(tid,i,ine,neID)
+!           if(ine .le. 1 .and. atype(i) .eq. atype(JID))then !first neighbour atoms
+!             confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
+!             atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
+!             
+!           else
+            if(omp_atype(tid,i) .eq. omp_atype(tid,JID))then !only consider atoms with the same type
+				confentropy(tid) = confentropy(tid) + omp_weight(tid,ine)
+				atomentropy(tid,i) = atomentropy(tid,i) + omp_weight(tid,ine) 
+                !write(971,*)"tid",tid,"loop_num",ith,"confentropy",confentropy(ith)    
+            endif           
+!           endif		  
+3 		continue                      
+2   continue
+    !write(*,*)"confentropy",confentropy(ith)					
+1 continue
+
+!! The following is used for detailed check
+
+!do 123 i=1,natom
+!	if(atomentropy(i) .le. 0.0)then
+!	
+!	write(*,*)"atom: ",i," atomentropy: ",atomentropy(i)
+!	
+!	do 211 ine =1,2 !neighbor atom type
+!       ntemp = CN_No(i,ine)
+!		do 311 neID = 1,ntemp ! atom ID of a neighbor type
+!          JID = CN_ID(i,ine,neID)
+!           if(ine .eq. 1 .or. ine .eq. 2)then !first neighbour atoms
+!            ! confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
+!             atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
+!			 write(*,*)"neighbourID",ine,"itype",atype(i),"jtype",atype(JID),"jID",JID
+!			 write(*,*)"weight",weight(ine),"pairweight",pairweight(atype(i),atype(JID))
+!           else
+!            ! confentropy = confentropy + weight(ine)
+!             atomentropy(i) = atomentropy(i) + weight(ine) 
+!             write(*,*)"***neighbourID",ine,"itype",atype(i),"jtype",atype(JID),"jID",JID
+!			 write(*,*)"weight",weight(ine)			 
+!           endif		  
+!		  !if(atype(i) .eq. atype(JID))then
+!          !   confentropy = confentropy + weight(ine)*pairweight(atype(i),atype(JID))
+!          !   atomentropy(i) = atomentropy(i) + weight(ine)*pairweight(atype(i),atype(JID))
+!          !endif 
+!311 		continue                      
+!211   continue
+!
+!	write(*,*)''
+!	pause
+!	endif
+!	
+!123 continue			
+									
+!pause
+return
+end
